@@ -1,0 +1,16 @@
+html{
+    background-color: black;
+}
+body{
+    background-color: lightgray;
+}
+form{
+    padding: 50px;
+    text-align: center;
+}
+input{
+    margin-top: 35px;
+}
+label{
+    font-size:30px;
+}
