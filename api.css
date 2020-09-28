@@ -4,8 +4,12 @@ html{
 body{
     background-color: lightgray;
 }
-form{
-    padding: 50px;
+.card{
+    padding: 20px;
+    text-align: center;
+}
+.pesquisa{
+    padding: 20px;
     text-align: center;
 }
 input{
