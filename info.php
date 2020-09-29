@@ -14,13 +14,21 @@ $card = getUrl($id);
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
+    <div class="bg-dark">
         <header>
-            <a href="index.php">Home</a>
+            <nav class="nav nav-pills justify-content-center">
+                <a class="nav-link" href="index.php">Home</a>
+                <a class="nav-link" href="jogos.php">Jogos</a>
+                <a class="nav-link" href="#">Link</a>
+            </nav>
         </header>
+    </div>
+    <div class="bg-secondary">
+        <div class="container">
+            <div class="row p-3">
+                <?php echo $card ?>
+            </div>
         </div>
-        <?php echo $card ?>
     </div>
 </body>
 

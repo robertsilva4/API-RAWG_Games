@@ -23,7 +23,7 @@ function getApi($pesquisa, $pagina){
             $jogosObj .= "<div class='col-4 p-2'>";
             $jogosObj .= "<div class='card' style='width: 23rem; height: 25rem;'><p>{$jogo->name}</p>";
             $jogosObj .= "<a href='info.php?a={$jogo->id}'><img width='320' height'400' src='{$jogo->background_image}'></img></a>";
-            $jogosObj .= "<p class='card-body'>";
+            $jogosObj .= "<p class='card-body p-1 text-left'>";
             $jogosObj .= "Data: {$jogo->released}";
             $jogosObj .= "<br> Plataforma: ";
             foreach($jogo->platforms as $plat){
@@ -31,7 +31,7 @@ function getApi($pesquisa, $pagina){
             }
             $jogosObj .= "<br> Gênero: ";
             foreach ($jogo->genres as $key ) {
-                $jogosObj .= $key->name . " ";
+                $jogosObj .= $key->name . ", ";
             }
             $jogosObj .= "<br><a href='{$jogo->clip->clip}'>Baixar clip do jogo</a></p></div></div>";
         }
