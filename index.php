@@ -21,7 +21,7 @@
     </div>
     <div class="container-fluid">
         <img src="img/games.jpg" alt="" width="1200" height="800">
-        <a class="link-rawg" href="https://rawg.io/" target="_blank"><b>RAWG Video Games</b><br> <small>Ir para o site</small></a>
+        <a class="btn btn-dark link-rawg" href="https://rawg.io/" target="_blank"><b>RAWG Video Games</b><br> <small>Ir para o site</small></a>
     </div>
 </body>
 
