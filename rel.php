@@ -10,7 +10,7 @@ function getUrl($id)
             <b class='card-title'>$json->name_original</b>
             <img class='p-5' src='$json->background_image' width='1050' height='590'>
             <div class='card-body'><p class='text-justify'>$json->description_raw</p>
-            <a href='{$json->website}'>Web Site</a>
+            <a href='{$json->website}' target='_blank'>Web Site</a>
             <p>lancamento: $json->released</p></div></div>";
         
 }

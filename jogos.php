@@ -19,7 +19,7 @@ $card = getCard();
             <nav class="nav nav-pills justify-content-center">
                 <a class="nav-link" href="index.php">Home</a>
                 <a class="nav-link active" href="jogos.php">Jogos</a>
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Contato</a>
             </nav>
         </header>
     </div>
@@ -27,7 +27,7 @@ $card = getCard();
         <div class="container">
             <form class="form-inline justify-content-center p-3 my-2 my-lg-0" method="post">
                 <input class="form-control mr-sm-2" type="text" placeholder="Digite o título" aria-label="Search" name="pesquisar">
-                <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Pesquisar">
+                <input class="btn btn-success my-2 my-sm-0" type="submit" value="Pesquisar">
             </form>
             <div class="row">
                 <div class="col-12">

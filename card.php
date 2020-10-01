@@ -9,9 +9,9 @@ function getApi($pesquisa, $pagina){
     $pag = $pagina;
 
     if ($pag == '') {
-        $url = "https://api.rawg.io/api/games?dates=2019-10-10,2020-10-10&ordering=-added";
+        $url = "https://api.rawg.io/api/games";
     }else{
-        $url = "https://api.rawg.io/api/games?dates=2019-10-10,2020-10-10&ordering=-added&page={$pag}";
+        $url = "https://api.rawg.io/api/games?page={$pag}";
     }
     
     $obj = json_decode(file_get_contents($url));
@@ -22,7 +22,7 @@ function getApi($pesquisa, $pagina){
         foreach($obj->results as $jogo){
             $jogosObj .= "<div class='col-4 p-2'>";
             $jogosObj .= "<div class='card' style='width: 23rem; height: 25rem;'><p>{$jogo->name}</p>";
-            $jogosObj .= "<a href='info.php?a={$jogo->id}'><img width='320' height'400' src='{$jogo->background_image}'></img></a>";
+            $jogosObj .= "<a href='info.php?a={$jogo->id}' target='_blank'><img width='320' height'400' src='{$jogo->background_image}'></img></a>";
             $jogosObj .= "<p class='card-body p-1 text-left'>";
             $jogosObj .= "Data: {$jogo->released}";
             $jogosObj .= "<br> Plataforma: ";
@@ -40,8 +40,8 @@ function getApi($pesquisa, $pagina){
         $jogosObj = '';
         foreach($obj->results as $jogo){
             if ($pesquisa == $jogo->name) {
-                $jogosObj .= "<div class='col-4'>";
-                $jogosObj .= "<div class='card' style='width: 25rem; height: 18rem;'><p>{$jogo->name}</p>";
+                $jogosObj .= "<div class='col-4' p-2>";
+                $jogosObj .= "<div class='card' style='width: 23rem; height: 25rem;'><p>{$jogo->name}</p>";
                 $jogosObj .= "<img width='320' height'400' src='{$jogo->background_image}'></img>";
                 $jogosObj .= "<p class='card-body'>";
                 foreach($jogo->platforms as $plat){
